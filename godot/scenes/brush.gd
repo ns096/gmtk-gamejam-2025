@@ -88,5 +88,11 @@ func _loop_stuff(start_seg, end_seg):
 
 	for i in range(start_seg, end_seg):
 		polygon.append(segments[i].global_position)
-	$Polygon2D.polygon = polygon
+		$Polygon2D.polygon = polygon
+		$Area2D/CollisionPolygon2D.polygon = polygon
+		$Area2D/CollisionPolygon2D.disabled = false
 	
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	body.modulate = Color.BLACK

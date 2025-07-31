@@ -39,8 +39,8 @@ position = Vector2(390, 192)
 [node name="Enemy3" parent="." instance=ExtResource("6_5jhce")]
 position = Vector2(212, 265)
 
+[node name="BrushSystem" parent="." instance=ExtResource("8_vus8m")]
+segment_amount = 40
+
 [node name="Player" parent="." instance=ExtResource("7_vus8m")]
 position = Vector2(91, 99)
-
-[node name="Node2D" parent="." instance=ExtResource("8_vus8m")]
-position = Vector2(166, 120)
