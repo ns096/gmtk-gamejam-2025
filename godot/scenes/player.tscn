@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dljoreff3fuvb" path="res://scenes/player.gd" id="1_g2els"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
-radius = 4.0
+radius = 5.0
 height = 14.0
 
 [node name="Player" type="CharacterBody2D"]

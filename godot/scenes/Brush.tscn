@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmliu1unwq3kl"]
+[gd_scene load_steps=5 format=3 uid="uid://cmliu1unwq3kl"]
 
 [ext_resource type="Script" uid="uid://dsw1gu4wiyes2" path="res://scenes/brush.gd" id="1_1iosg"]
 [ext_resource type="Texture2D" uid="uid://dubog7n4bc5gs" path="res://assets/kenney tiny dungeon/Tiles/tile_0128.png" id="1_oq3ck"]
 [ext_resource type="PackedScene" uid="uid://cbrcnl6g0voib" path="res://scenes/segment.tscn" id="3_um8ut"]
+[ext_resource type="Texture2D" uid="uid://cdl8f7imlvc3u" path="res://assets/kenney tiny dungeon/Tiles/tile_0049.png" id="4_4vgbe"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1iosg")
@@ -15,3 +16,9 @@ texture = ExtResource("1_oq3ck")
 
 [node name="LineSegment" parent="segments" instance=ExtResource("3_um8ut")]
 visible = false
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture = ExtResource("4_4vgbe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+disabled = true

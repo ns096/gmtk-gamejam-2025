@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 @export var speed: float = 200.0
 
+func _ready() -> void:
+	Globals.player = self
+
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
 

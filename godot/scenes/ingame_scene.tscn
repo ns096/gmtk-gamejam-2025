@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cik30de5gaaah"]
+[gd_scene load_steps=9 format=3 uid="uid://cik30de5gaaah"]
 
 [ext_resource type="Script" uid="uid://ovjegpk30m4h" path="res://scenes/ingame_scene.gd" id="1_objyc"]
 [ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="1_y6ebv"]
 [ext_resource type="Texture2D" uid="uid://dmelj2qgr8w7k" path="res://icon.svg" id="2_h1yxu"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="3_8o178"]
 [ext_resource type="Script" uid="uid://cu3npowt4r1px" path="res://scenes/node_example.gd" id="3_a5686"]
+[ext_resource type="PackedScene" uid="uid://be8qxybmsxcig" path="res://scenes/enemy.tscn" id="6_5jhce"]
+[ext_resource type="PackedScene" uid="uid://bjljsafk8snmi" path="res://scenes/player.tscn" id="7_vus8m"]
+[ext_resource type="PackedScene" uid="uid://cmliu1unwq3kl" path="res://scenes/Brush.tscn" id="8_vus8m"]
 
 [node name="IngameScene" type="Node2D"]
 script = ExtResource("1_objyc")
@@ -23,3 +26,21 @@ visible = false
 unique_name_in_owner = true
 process_mode = 2
 visible = false
+
+[node name="Enemy" parent="." instance=ExtResource("6_5jhce")]
+position = Vector2(368, 29)
+
+[node name="Enemy4" parent="." instance=ExtResource("6_5jhce")]
+position = Vector2(31, 29)
+
+[node name="Enemy2" parent="." instance=ExtResource("6_5jhce")]
+position = Vector2(390, 192)
+
+[node name="Enemy3" parent="." instance=ExtResource("6_5jhce")]
+position = Vector2(212, 265)
+
+[node name="Player" parent="." instance=ExtResource("7_vus8m")]
+position = Vector2(91, 99)
+
+[node name="Node2D" parent="." instance=ExtResource("8_vus8m")]
+position = Vector2(166, 120)

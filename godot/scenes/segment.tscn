@@ -1,12 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbrcnl6g0voib"]
+[gd_scene load_steps=4 format=3 uid="uid://cbrcnl6g0voib"]
 
+[ext_resource type="Script" uid="uid://dbfs7ahijse8g" path="res://scenes/segment.gd" id="1_ekkcu"]
 [ext_resource type="Texture2D" uid="uid://bo4cp3uvf6siw" path="res://assets/kenney tiny dungeon/Tiles/tile_0127.png" id="1_u4y6a"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_w5qyg"]
-a = Vector2(0, -6)
-b = Vector2(0, 7)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ekkcu"]
+radius = 1.0
+height = 22.0
 
 [node name="LineSegment" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 3
+input_pickable = true
+script = ExtResource("1_ekkcu")
 
 [node name="Line2D" type="Line2D" parent="."]
 visible = false
@@ -16,11 +21,14 @@ points = PackedVector2Array(-10.2572, 19, -10.2572, 9)
 texture_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, 0)
+position = Vector2(10, 0)
 rotation = -1.5708
-shape = SubResource("SegmentShape2D_w5qyg")
+shape = SubResource("CapsuleShape2D_ekkcu")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
 modulate = Color(0, 0, 0, 1)
-scale = Vector2(0.375, 1)
+position = Vector2(8.74228e-08, -0.436458)
+scale = Vector2(0.375, 1.66264)
 texture = ExtResource("1_u4y6a")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
