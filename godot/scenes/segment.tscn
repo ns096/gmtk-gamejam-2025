@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbrcnl6g0voib"]
+
+[ext_resource type="Texture2D" uid="uid://bo4cp3uvf6siw" path="res://assets/kenney tiny dungeon/Tiles/tile_0127.png" id="1_u4y6a"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_w5qyg"]
+a = Vector2(0, -6)
+b = Vector2(0, 7)
+
+[node name="LineSegment" type="StaticBody2D"]
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+position = Vector2(3, -9)
+scale = Vector2(0.264, 1)
+points = PackedVector2Array(-10.2572, 19, -10.2572, 9)
+texture_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 0)
+rotation = -1.5708
+shape = SubResource("SegmentShape2D_w5qyg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(0.375, 1)
+texture = ExtResource("1_u4y6a")
